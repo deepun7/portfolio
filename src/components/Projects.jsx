@@ -15,7 +15,7 @@ const projectsData = [
             "Implemented a scalable backend using modern APIs and content pipelines to handle fast, high-quality prompt processing."
         ],
         github: "https://github.com/deepun7/promptenhancer",
-        liveUrl: "https://promptenhancer.vercel.app",
+        liveUrl: "https://promptenhancer-chi.vercel.app/",
         colorClass: "group-hover:text-orange-400",
         borderClass: "group-hover:border-cyan-400/50 group-hover:shadow-[inset_0_0_40px_rgba(34,211,238,0.05)]"
     },
