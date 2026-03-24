@@ -1,0 +1,13 @@
+.app {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+/* Base styles for all sections to have proper spacing */
+section {
+  position: relative;
+  z-index: 1;
+}

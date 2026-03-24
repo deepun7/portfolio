@@ -1,0 +1,250 @@
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.cert-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cert-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cert-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    flex-grow: 1;
+}
+
+.cert-issuer {
+    color: var(--accent-2);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.cert-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.view-cert-btn {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.cert-card:hover .view-cert-btn {
+    background: rgba(0, 229, 255, 0.1);
+    color: var(--accent-2);
+}
+
+/* Dublic Certificate Design */
+.cert-overlay {
+    z-index: 3000;
+}
+
+.dublic-cert {
+    background: #fdfdfd;
+    color: #1a1a1a;
+    max-width: 900px;
+    width: 95%;
+    aspect-ratio: 1.414;
+    /* Standard landscape aspect ratio */
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.cert-close {
+    color: #fff;
+    right: -2rem;
+    top: -2rem;
+    font-size: 3rem;
+}
+
+.cert-close:hover {
+    color: var(--accent-3);
+    transform: scale(1.1);
+}
+
+.cert-border {
+    width: 94%;
+    height: 92%;
+    border: 10px solid #2c3e50;
+    padding: 8px;
+    position: relative;
+}
+
+.cert-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #e67e22;
+}
+
+.cert-inner {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #bdc3c7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+    background: radial-gradient(circle, #fff 40%, #f9f9ca 100%);
+}
+
+.cert-head {
+    font-family: 'Outfit', serif;
+    font-size: 3.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cert-present {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+}
+
+.cert-name {
+    font-size: 3.5rem;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 1.5rem;
+    /* Override text-gradient for light bg */
+    background: linear-gradient(90deg, #8e44ad, #2980b9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cert-for {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+}
+
+.cert-course {
+    font-size: 2rem;
+    color: #e67e22;
+    max-width: 80%;
+    margin: 0 auto 3rem;
+}
+
+.cert-footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+.cert-sig {
+    text-align: center;
+    width: 200px;
+}
+
+.cert-sig .line {
+    height: 1px;
+    background: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.cert-sig p {
+    font-size: 1rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.cert-seal {
+    width: 100px;
+    height: 100px;
+    background: #f1c40f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px dashed #e67e22;
+    position: relative;
+}
+
+.cert-seal::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    border: 1px solid #f1c40f;
+    border-radius: 50%;
+}
+
+.seal-inner {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #d35400;
+    transform: rotate(-15deg);
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .cert-head {
+        font-size: 2rem;
+    }
+
+    .cert-name {
+        font-size: 2rem;
+    }
+
+    .cert-course {
+        font-size: 1.2rem;
+    }
+
+    .cert-inner {
+        padding: 1rem;
+    }
+
+    .cert-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cert-seal {
+        display: none;
+    }
+
+    .dublic-cert {
+        aspect-ratio: auto;
+        height: 80vh;
+    }
+}
