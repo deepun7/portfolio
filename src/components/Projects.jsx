@@ -15,7 +15,7 @@ const projectsData = [
             "Implemented a scalable backend using modern APIs and content pipelines to handle fast, high-quality prompt processing."
         ],
         github: "https://github.com/deepun7/promptenhancer",
-        liveUrl: "https://promptenhancer-chi.vercel.app/",
+        liveUrl: "https://promptenhancer-chi.vercel.app",
         colorClass: "group-hover:text-orange-400",
         borderClass: "group-hover:border-cyan-400/50 group-hover:shadow-[inset_0_0_40px_rgba(34,211,238,0.05)]"
     },
@@ -156,7 +156,7 @@ const Projects = () => {
                                     <a 
                                         href={selectedProject.liveUrl} 
                                         target="_blank" 
-                                        rel="noreferrer" 
+                                        rel="noopener" 
                                         className="group flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-white hover:text-cyan-400 transition-colors"
                                     >
                                         <span className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-cyan-400 group-hover:border-cyan-400 group-hover:text-black transition-all">
